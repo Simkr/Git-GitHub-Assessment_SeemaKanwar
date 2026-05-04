@@ -168,9 +168,8 @@ git revert HEAD
 Verify the commit history
 git log --oneline
 
-<img width="738" height="386" alt="image" src="https://github.com/user-attachments/assets/5be89de5-ae1f-4f34-aa1c-2aae28cb9f28" />
-<img width="764" height="551" alt="image" src="https://github.com/user-attachments/assets/4e57da12-7dfb-4b9d-8f4b-3bd0b42b11eb" />
-<img width="737" height="651" alt="image" src="https://github.com/user-attachments/assets/7e5c3442-4322-4548-b337-d72e83e908f3" />
+
+
 
 
 

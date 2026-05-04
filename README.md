@@ -129,14 +129,6 @@ Question 4: Handling Errors (Stash, Reset, Revert)
 ===================================================
 Make changes to app.py but do NOT commit
 $ vi app.py
-$ cat app.py
-def greet(name):
-    return f"Hello, {name}!"
-def new_feature_WIP():
-    return "This is a new feature! Testing"
-
-print(greet("Seema"))
-print(new_feature())
 
 Stash the changes (include untracked files)
 git stash push -u -m "WIP: partial changes in app.py"
@@ -152,6 +144,7 @@ git add app.py
 git commit -m "Add new feature to app.py"
 
 Make another commit with incorrect code
+vi app.py and enter some buggy code
 git add app.py
 git commit -m "Added buggy code"
 
@@ -159,6 +152,7 @@ Undo the last commit using reset
 git reset --hard HEAD~1
 
 Make another commit
+vi app.py and add new code
 git add app.py
 git commit -m "Fix bug in app.py"
 
@@ -167,6 +161,17 @@ git revert HEAD
 
 Verify the commit history
 git log --oneline
+
+<img width="696" height="556" alt="image" src="https://github.com/user-attachments/assets/ff84ed4e-2c4e-4398-b63d-80ae183fae3b" />
+<img width="654" height="623" alt="image" src="https://github.com/user-attachments/assets/49b66d34-c875-49f4-85cd-104bf578eb9c" />
+<img width="645" height="572" alt="image" src="https://github.com/user-attachments/assets/1f1a3f59-0e87-49f1-8563-f6fba0ed73c5" />
+<img width="642" height="420" alt="image" src="https://github.com/user-attachments/assets/f6ed4f58-8c42-406a-bd84-39d40679f6cc" />
+<img width="657" height="390" alt="image" src="https://github.com/user-attachments/assets/c1475d83-71d1-4d40-a42d-103d7fa2e61c" />
+<img width="649" height="292" alt="image" src="https://github.com/user-attachments/assets/881a0b71-a393-4b03-a6d1-9ef940b09139" />
+
+
+
+
 
 
 

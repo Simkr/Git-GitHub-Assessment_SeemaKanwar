@@ -125,6 +125,52 @@ git branch -D temp-branch
 <img width="811" height="633" alt="image" src="https://github.com/user-attachments/assets/ac0b3237-554e-4cc1-9f30-1155a33866a9" />
 <img width="804" height="377" alt="image" src="https://github.com/user-attachments/assets/c45658db-0192-4c00-9ae6-f65156161e9a" />
 
+Question 4: Handling Errors (Stash, Reset, Revert)
+===================================================
+Make changes to app.py but do NOT commit
+$ vi app.py
+$ cat app.py
+def greet(name):
+    return f"Hello, {name}!"
+def new_feature_WIP():
+    return "This is a new feature! Testing"
+
+print(greet("Seema"))
+print(new_feature())
+
+Stash the changes (include untracked files)
+git stash push -u -m "WIP: partial changes in app.py"
+
+Check the stash list
+git stash list
+
+Apply the stashed changes back
+git stash apply stash@{0}
+
+Commit the changes
+git add app.py
+git commit -m "Add new feature to app.py"
+
+Make another commit with incorrect code
+git add app.py
+git commit -m "Added buggy code"
+
+Undo the last commit using reset
+git reset --hard HEAD~1
+
+Make another commit
+git add app.py
+git commit -m "Fix bug in app.py"
+
+Undo a commit using revert (create a new reversing commit)
+git revert HEAD
+
+Verify the commit history
+git log --oneline
+
+<img width="738" height="386" alt="image" src="https://github.com/user-attachments/assets/5be89de5-ae1f-4f34-aa1c-2aae28cb9f28" />
+<img width="764" height="551" alt="image" src="https://github.com/user-attachments/assets/4e57da12-7dfb-4b9d-8f4b-3bd0b42b11eb" />
+<img width="737" height="651" alt="image" src="https://github.com/user-attachments/assets/7e5c3442-4322-4548-b337-d72e83e908f3" />
 
 
 

@@ -74,4 +74,59 @@ git log --oneline
 <img width="869" height="470" alt="image" src="https://github.com/user-attachments/assets/54790d2e-17f1-47e9-97e9-37352ea3c61e" />
 <img width="708" height="691" alt="image" src="https://github.com/user-attachments/assets/06cac2e7-ebdc-4a78-8d64-9116a0dfaf0a" />
 
+Question 3: Branching & Feature Development
+============================================
+
+Create a new branch (e.g., feature-update)
+git branch feature-update
+
+Switch to the new branch
+git switch feature-update
+
+Modify app.py with new feature logic
+vi app.py
+def greet(name):
+    return f"Hello, {name}!"
+
+def new_feature():
+    return "This is a new feature!"
+
+print(greet("Seema"))
+print(new_feature())
+
+Stage and commit the changes
+git add app.py
+git commit -m "Add new_feature function in feature-update branch"
+
+Switch back to the main branch
+git switch master
+
+Merge the feature branch into main
+git merge feature-update
+
+Verify changes are merged
+cat app.py
+def greet(name):
+    return f"Hello, {name}!"
+def new_feature():
+    return "This is a new feature!"
+print(greet("Seema"))
+print(new_feature())
+
+Delete the branch safely
+git branch -d feature-update
+
+Try force deleting a branch (create a dummy branch for this)
+git switch -c temp-branch
+echo "# temp change" >> app.py
+git add app.py
+git commit -m "Temp commit"
+git switch master
+git branch -D temp-branch
+<img width="803" height="344" alt="image" src="https://github.com/user-attachments/assets/2625b01d-ca5d-43a0-a63b-36f7df2b4f89" />
+<img width="811" height="633" alt="image" src="https://github.com/user-attachments/assets/ac0b3237-554e-4cc1-9f30-1155a33866a9" />
+<img width="804" height="377" alt="image" src="https://github.com/user-attachments/assets/c45658db-0192-4c00-9ae6-f65156161e9a" />
+
+
+
 

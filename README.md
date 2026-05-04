@@ -55,10 +55,8 @@ git commit -m "Add greet function to app.py"
 6. Make another change in app.py
 vi app.py
 
-7. Stage all changes
+7. Stage all changes (or everything:)
 git add app.py
-
-(or everything:)
 git add .
 
 8. Commit again
